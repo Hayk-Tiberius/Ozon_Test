@@ -71,7 +71,7 @@ customElements.define('progress-block', class extends HTMLElement {
 
         function updateProgressBar(percentage) {
             let counter1 = 0;
-            const deg = percentage * 3.6; // Поскольку 360 градусов соответствует 100%
+            const deg = percentage * 3.6; 
             progressFill.style.transform = `rotate(${deg}deg)`;
             counter1 += 1;
             progressFill.style.width = `${counter1}%`;
