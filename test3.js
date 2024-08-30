@@ -54,10 +54,10 @@ class ProgressRing {
       this.input.setAttribute('max', '100');
   
       this.input.addEventListener('input', () => {
-        let value = parseInt(this.input.value, 10);
+        let value = this.input.value === '' ? 0 : parseInt(this.input.value, 10)
   
         
-        if (value < 0) value = 0;
+        if (value < 0 || value === '') value = 0;
         if (value > 100) value = 100;
   
         this.input.value = value; 
